@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "5d0a4a4c-f31b-4a94-b835-94c6c9ea3a34",
+		"name": "surbana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18659712"
+	},
+	"item": [
+		{
+			"name": "Building",
+			"item": [
+				{
+					"name": "Create Building",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"C\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/building/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"building",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all buildings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/building",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"building"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Building",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Test A\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/building/update/ff3ddb93-9d15-4a07-b79f-d4471b60879b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"building",
+								"update",
+								"ff3ddb93-9d15-4a07-b79f-d4471b60879b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Building By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/building/ff3ddb93-9d15-4a07-b79f-d4471b60879b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"building",
+								"ff3ddb93-9d15-4a07-b79f-d4471b60879b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Building",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"b12e1e07-e470-4c59-b49a-65e7deaa640d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/building/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"building",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Create Locations",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Car Park\",\n    \"locationCode\": \"CarPark\",\n    \"area\": 80.620,\n    \"building\": \"83d0b71f-ef51-428b-ba03-ac9ca3b65b30\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/locations/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/locations",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get location by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/locations/3935b9b6-8f75-4f64-aa0f-5a204d50890d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations",
+								"3935b9b6-8f75-4f64-aa0f-5a204d50890d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get hierachy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/locations/hierachy/108c24bb-2ee3-49fa-9c66-b0ce3a99ae0c",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations",
+								"hierachy",
+								"108c24bb-2ee3-49fa-9c66-b0ce3a99ae0c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location_code\": \"Coridor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/locations/update/4aa09752-cafa-42ca-bf86-3474b66ff96d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations",
+								"update",
+								"4aa09752-cafa-42ca-bf86-3474b66ff96d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/locations/delete/4aa09752-cafa-42ca-bf86-3474b66ff96d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"locations",
+								"delete",
+								"4aa09752-cafa-42ca-bf86-3474b66ff96d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

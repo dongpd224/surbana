@@ -4,16 +4,16 @@ export class CreateLocationDto {
   @IsString()
   name: string;
 
-  @IsString()
-  number: string;
-
   @IsNumber()
   area: number;
 
-  @IsNumber()
-  buildingId: number;
+  @IsString()
+  building_id: string;
+
+  @IsString()
+  location_code: string;
 
   @IsOptional()
-  @IsNumber()
-  parentLocationId?: number;
+  @IsString()
+  parent_location_id?: string;
 }
