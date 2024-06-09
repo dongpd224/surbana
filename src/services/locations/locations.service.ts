@@ -60,10 +60,7 @@ export class LocationsService implements IBaseService<Location> {
     let parentLocation;
     let locationNumber;
 
-    await this.checkUniqueCode(
-      createLocationDto?.location_code,
-      createLocationDto?.name,
-    );
+    await this.checkUniqueCode(createLocationDto);
 
     if (building_id) {
       building = await this.buildingRepository.findOne({
@@ -131,10 +128,7 @@ export class LocationsService implements IBaseService<Location> {
         location.name !== updateLocationDto?.name ||
         location.location_code !== updateLocationDto?.location_code
       ) {
-        await this.checkUniqueCode(
-          updateLocationDto?.location_code,
-          updateLocationDto?.name,
-        );
+        await this.checkUniqueCode(updateLocationDto);
       }
       const {
         name,
@@ -207,9 +201,16 @@ export class LocationsService implements IBaseService<Location> {
     const parentCode = await this.getParentCode(parent);
     return `${parentCode}-${location.location_code}`;
   }
-  private async checkUniqueCode(code: string, name?: string) {
+  private async checkUniqueCode(dto: CreateLocationDto | UpdateLocationDto) {
     const existingLocation = await this.locationRepository.findOne({
-      where: [{ location_code: code, name }],
+      where: [
+        {
+          location_code: dto?.location_code,
+          name: dto?.name,
+          parent_location_id: dto?.parent_location_id,
+          building_id: dto?.building_id,
+        },
+      ],
     });
 
     if (existingLocation) {

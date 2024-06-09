@@ -150,7 +150,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Car Park\",\n    \"locationCode\": \"CarPark\",\n    \"area\": 80.620,\n    \"building\": \"83d0b71f-ef51-428b-ba03-ac9ca3b65b30\"\n}",
+							"raw": "{\n    \"name\": \"Pantry Level 5\",\n    \"location_code\": \"15\",\n    \"area\": 30.620,\n    \"building_id\": \"281e415f-42b5-4f94-8a94-473b428ed6dd\",\n    \"parent_location_id\" : \"bd1906d9-3eb5-42dc-b743-203d5a33261b\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -205,13 +205,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/locations/3935b9b6-8f75-4f64-aa0f-5a204d50890d",
+							"raw": "{{base_url}}/locations/6671d9eb-827a-4b6d-90af-a6f61c561359",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"locations",
-								"3935b9b6-8f75-4f64-aa0f-5a204d50890d"
+								"6671d9eb-827a-4b6d-90af-a6f61c561359"
 							]
 						}
 					},
@@ -223,14 +223,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/locations/hierachy/108c24bb-2ee3-49fa-9c66-b0ce3a99ae0c",
+							"raw": "{{base_url}}/locations/hierachy/bd1906d9-3eb5-42dc-b743-203d5a33261b",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"locations",
 								"hierachy",
-								"108c24bb-2ee3-49fa-9c66-b0ce3a99ae0c"
+								"bd1906d9-3eb5-42dc-b743-203d5a33261b"
 							]
 						}
 					},
@@ -243,7 +243,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"location_code\": \"Coridor\"\n}",
+							"raw": "{\n    \"location_code\": \"test\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -251,14 +251,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/locations/update/4aa09752-cafa-42ca-bf86-3474b66ff96d",
+							"raw": "{{base_url}}/locations/update/6671d9eb-827a-4b6d-90af-a6f61c561359",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"locations",
 								"update",
-								"4aa09752-cafa-42ca-bf86-3474b66ff96d"
+								"6671d9eb-827a-4b6d-90af-a6f61c561359"
 							]
 						}
 					},
