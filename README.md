@@ -2,9 +2,11 @@
 
 # Pham Dinh Dong - Surbana test
 
+## Prerequisites
+Docker
+Docker Compose
 
 ## Running the app
-For this project, I'm using docker to contain the app. The examiner's machine should install Docker to run the app.
 ```bash
 
 $ docker compose up
