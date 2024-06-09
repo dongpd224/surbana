@@ -9,7 +9,14 @@ Docker Compose
 ## Running the app
 ```bash
 
-$ docker compose up
+$ sh run.sh
+
+```
+
+## Shutdown the app
+```bash
+
+$ docker compose down
 
 ```
 
